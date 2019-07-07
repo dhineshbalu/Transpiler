@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>
+            My Transpiler
+        </title>
+    </head>
+<body>
+    <script src="tokenizer.js"></script>
+    <script src="parser.js"></script>
+    <script src="transformer.js"></script>
+    <script src="processor.js"></script>
+    <script src="CodeGenerator.js"></script>
+</body>
+<script>
+console.log(CodeGenerator(processor(transformer(parser(tokenizer('int main() {  double firstNumber, secondNumber, temporaryVariable; printf("Enter first number: ");scanf("%lf", &firstNumber);printf("Enter second number: ");scanf("%lf",&secondNumber);temporaryVariable = firstNumber;firstNumber = secondNumber;secondNumber = temporaryVariable;printf("\nAfter swapping, firstNumber = %.2lf\n", firstNumber);printf("After swapping, secondNumber = %.2lf", secondNumber); } '))))))
+</script>
+</html>
